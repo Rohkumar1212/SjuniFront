@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  node:
+    build: .
+    container_name: 'sjuniversity'
+    env_file:
+      - ./.env
+    volumes:
+      - images:/application/public
+    ports:
+      - 3011:3011
+    restart: on-failure
+volumes:
+  images:
