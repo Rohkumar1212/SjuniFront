@@ -1,0 +1,19 @@
+.modal-body {
+    width: 100%; /* Adjust width as needed */   
+    background-size: cover; /* Adjusts image to cover the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+}
+
+p{
+    display: inline;
+}
+.background-div {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .modal-dialog {
+    max-width: 800px;
+  }  

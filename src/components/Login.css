@@ -1,0 +1,56 @@
+.container.imgsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(212, 222, 222);
+}
+
+.row.loginsection {
+    width: 100%;
+    max-width: 800px;
+}
+
+.login-card {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.loginform {
+    padding: 20px;
+}
+
+.admin h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-label {
+    color: #555;
+}
+
+.input-field {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.btn-success {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.image-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.imgadmin {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,56 @@
+
+.modal-dialog {
+    padding: 10px !important;
+    max-width: 1100px !important;
+}
+.table>thead {
+    vertical-align: middle;
+}
+.action{
+    display: flex;
+}
+td{
+    font-size: 11px;
+    word-wrap: inherit;
+}
+th{
+    width: auto;
+    font-size: 13px;
+}
+form{
+    display: ruby !important;
+
+}
+form div{
+    padding: 10px !important;
+} 
+.table {
+    overflow: scroll !important;
+}
+.action .btn {
+    padding: 8px;
+    height: 29px;
+    font-size: 8px;
+    margin-left: 5px;
+}
+.addstudents{
+    font-size: 18px;
+    margin-bottom: 0px !important;
+}
+
+.addstudents {
+    margin-top: -5px;
+}
+.filters{
+    display: flex;
+    padding: 10px;
+}
+.action Button{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 10px;
+}
+.h4, h4 {
+    font-size: 1.2rem;
+}
+

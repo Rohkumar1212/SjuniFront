@@ -1,0 +1,130 @@
+/* src/Certificate.css */
+.certificate {
+    border: 5px solid #000;
+    padding: 130px;
+    width: 900px;
+    height: 700px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background: #fff;
+    background: url('assets/img/Certificates.png') no-repeat center center;
+}
+.certificate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Add the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-form,
+.certificate-display {
+    background: rgba(255, 255, 255, 0.9);
+    /* Add a slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button,
+.get-certificate-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-button:hover,
+.get-certificate-button:hover {
+    background-color: #45a049;
+}
+
+.certificate-display h2 {
+    margin-bottom: 20px;
+}
+
+.certificate-field {
+    margin-bottom: 10px;
+}
+
+.certificate-display {
+    background-image: url('assets/img/Certificates.png');
+    background-size: cover;
+    padding: 50px 0px 0px 0px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    max-width: 600px;
+    height: 850px;
+    margin: 0 auto;
+}
+
+.certificate-fields {
+    margin-top: 268px;
+    padding: auto;
+    margin-left: 0px;
+}
+
+.Download {
+    margin-top: -642px;
+    position: absolute;
+    display: block;
+    margin-left: -20px;
+}
+
+.certificate-field {
+    margin-bottom: -25px;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.certificate-field strong {
+    margin-right: 10px;
+}
+
+.form-group {
+    width: 40%;
+}
+button {
+    padding: 9px 8px;
+    border: none;
+    border-radius: 4px;
+    background: #ea3645;
+    color: #fff;
+    cursor: pointer;
+}
+
+.certificatecss{
+      width: 24% !important;
+  
+}

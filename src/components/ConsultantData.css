@@ -1,0 +1,181 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-responsive {
+  overflow-y: scroll !important;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.loginform {
+  padding: 20px !important;
+}
+
+.admin {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+form {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  width: auto;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+
+  table,
+  th,
+  td {
+    display: block;
+  }
+
+  th,
+  td {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  th {
+    background-color: transparent;
+  }
+
+  th,
+  td {
+    text-align: right;
+    padding: 10px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    display: block;
+  }
+
+  form label,
+  form input,
+  form button {
+    width: 100%;
+  }
+}
+
+#data-label img {
+  width: 10px !important;
+}
+
+.close {
+  color: rgb(197, 9, 9);
+  border: 1px solid rgb(218, 210, 210);
+  width: 24px;
+  padding: 0px;
+  margin-left: 0px;
+}
+.text-lg-end {
+  text-align: center !important;
+}
+.modal-title {
+  text-align: center;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.modal-dialog {
+  width: 1000px;
+  margin-left: 240px;
+}
+
+.editupdate {
+  display: flex;
+}
+
+.actionbtn {
+  width: 120px;
+}
+
+.mobile {
+  width: 120px !important;
+}
+
+.profilepic {
+  width: 80px;
+}
+
+.profilepic img {
+  height: 44px;
+  border-radius: 36px;
+}
+
+.btn-sm {
+  font-size: 10px;
+}
+
+.actions {
+  width: 170px;
+  display: flex;
+}

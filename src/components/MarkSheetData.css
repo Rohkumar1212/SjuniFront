@@ -1,0 +1,64 @@
+.marksheet-app {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .form-container {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .marksheet-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .marksheet-table th, .marksheet-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .marksheet-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  form {
+    display: ruby !important;
+}
+.popup-content{
+  width: 600px;
+  height: 100px;
+  padding: 25px;
+  background-color: rgb(244, 214, 204);
+  box-shadow: 10px 10px 5px rgb(166, 186, 193);
+}
+.popup-content .closentn{
+margin-left: 500px;
+margin-top: -30px;
+}

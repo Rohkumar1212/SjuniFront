@@ -1,0 +1,206 @@
+/* Basic resets and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-fluid{
+    width: 100%;
+    height: 100px;
+}
+
+/* Ensure the body takes up the full height and uses a sans-serif font */
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Flexbox layout for the dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Wrapper for the main content to allow sidebar and main content to be next to each other */
+.main-content-wrapper {
+    display: flex;
+    flex: 1;
+    transition: margin-left 0.3s;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0);
+    transition: transform 0.3s;
+    z-index: 1000;
+    border-right: 1px solid #0d0d0d;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-list {
+    flex: 1;
+}
+
+.logo {
+    height: 100px;
+}
+
+/* Topbar styling */
+.topbar {
+    background-color: #f0e4e4;
+    color: rgb(16, 1, 1);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    /* Hidden by default, shown on smaller screens */
+}
+
+/* Main content styling */
+.main-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Overlay styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Active link styling */
+.active-link {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    .sidebar-toggle-btn {
+        display: block;
+        /* Show toggle button on smaller screens */
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -265px;
+        /* Hide sidebar by moving it to the left */
+        height: 100%;
+        z-index: 1000;
+    }
+
+    .main-content-wrapper.sidebar-open .sidebar {
+        transform: translateX(265px);
+        /* Show sidebar by moving it into view */
+    }
+
+    .main-content-wrapper.sidebar-open {
+        margin-left: 0;
+        /* Ensure main content does not shift */
+    }
+}
+
+/* Responsive design for very small devices */
+@media (max-width: 480px) {
+
+    .topbar,
+    .footer {
+        padding: 0.5rem;
+    }
+
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    .offset-10 {
+        margin-left: 3.33333333% !important;
+    }
+
+}
+
+@media (min-width: 480px) {
+    .profile {
+        align-items: right;
+    }
+
+    .sidebar {
+        margin-top: -70px !important;
+    }
+}
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  .sidebar-toggle-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile-container {
+    position: relative;
+  }
+  
+  .profile {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  

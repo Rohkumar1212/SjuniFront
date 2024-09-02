@@ -1,0 +1,41 @@
+
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .form-group table, .form-group th, .form-group td {
+            border: 1px solid #ddd;
+        }
+        .form-group th, .form-group td {
+            padding: 8px;
+            text-align: left;
+        }
+        .form-group th {
+            background-color: #f2f2f2;
+        }
+        .signature {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .signature div {
+            width: 30%;
+            text-align: center;
+        }

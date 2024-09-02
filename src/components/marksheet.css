@@ -1,0 +1,48 @@
+.marksheet-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(196, 179, 173);
+    box-shadow: 10px 10px 5px 12px lightblue; 
+    border-radius: 10px;
+  }
+  /* Responsive design for smaller devices */
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+}
+
+  
+  .marksheet-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .marksheet-container label {
+    margin: 10px 0 5px;
+  }
+  
+  .marksheet-container input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .marksheet-container button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .marksheet-container button:hover {
+    background-color: #0056b3;
+  }
+  

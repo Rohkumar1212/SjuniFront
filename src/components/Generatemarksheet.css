@@ -1,0 +1,272 @@
+  #main {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: 5px solid;
+    border-style: double;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  #info {
+    border: 2px solid rgb(182, 179, 179);
+    margin: 30px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: 'Cormorant SC', serif;
+    font-weight: bold;   
+  }
+
+  table {
+    width: 100%;
+  }
+
+  #main table,
+  th,
+  td {
+    text-align: left;
+  }
+
+  #mark {
+    border: 2px solid rgb(182, 179, 179);
+    margin: 30px;
+    font-weight: bold;
+  }
+
+  #mark input {
+    width: 50px;
+  }
+
+  #result {
+    border: 2px solid rgb(182, 179, 179);
+    margin: 30px;
+    font-weight: bold;
+  }
+
+  #result th {
+    width: 120px;
+  }
+
+
+
+  #main1 {
+    width: 99%;
+    background-color: #FFFFFF;
+    border: 5px solid;
+    border-style: double;
+    padding-bottom: 50px;
+  }
+
+  .inner-table {
+    width: 100%;
+    background-image: url('assets/img/Certificates.png');
+    background-size: cover;
+    background-position: center;
+    border-collapse: collapse;
+  }    
+
+  .inner-table th,
+  .inner-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .inner-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .download-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .download-button:hover {
+    background-color: #45a049;
+  }
+
+
+  .text-center {
+    text-align: center;
+  }
+
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  .table th {
+    background-color: #f2f2f2;
+  }
+
+  .qrcode,
+  .student-pic {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .btn-view,
+  .btn-download {
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .btn-view:hover,
+  .btn-download:hover {
+    background-color: #0056b3;
+  }
+
+  .marksheet-details {
+    margin: 20px 0;
+  }
+
+  .student-info {
+    margin-left: 50px;
+  }
+
+  .student-info,
+  .subjects-info {
+    margin-bottom: 20px;
+    background-image: url('/src/assets/img/SjUniversity.png');
+    height: 1120px;
+    width: 800px;
+  }
+  .certificatespopup{
+    margin-top: 600px;
+    background-image: url('assets/img/Certificates.png');
+    padding: 50px !important;
+    width: 920PX;
+    height:1280px;
+  }
+
+  .student-pic-large {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .inner-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .inner-table th,
+  .inner-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+
+  .inner-table th {
+    background-color: #f2f2f2;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+
+  .student-info p {
+    font-size: 10px;
+  }
+  .marksheettable {
+    margin-left: 64px;
+    width: 668px;
+    margin-top: 44px;
+}
+  .maksheetinfo {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 20px;
+  }
+  .marksheetinfo{
+    margin-top: 72px;
+    margin-left: 55px;
+    display: flex;
+
+  }
+  .profileimg {
+    margin-top: 67px;
+    margin-left: 608px;
+    border-radius: 60px;
+}
+  .viewbtn{
+    font-size: 15px;
+  }
+  .marks-summary {
+    display: flex;   
+    margin-top: 100px;
+    padding: 6px; 
+}
+
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-student-pic {
+  max-width: 100px;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 20px;
+}

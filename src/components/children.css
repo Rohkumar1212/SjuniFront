@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+.childrensection{
+    width: 1080px;
+    padding: 10px;  
+    background-color: rgb(223, 204, 197);
+}
+.col-md-3 {    
+    padding: 3px;
+
+}
+.main-content-wrapper {
+    background-color: rgb(223, 204, 197);
+}
+.btn-sm{
+    height: 27px;
+}
+}

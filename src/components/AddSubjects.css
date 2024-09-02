@@ -1,0 +1,84 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    padding: 20px;
+  }
+  
+  .form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #d3b5aa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .popup {
+    margin-top: 20px;
+    padding: 10px;
+    background: #dfccc5;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+  }
+  
+  .subject-list {
+    margin-top: 20px;
+  }
+  
+  .subject-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subject-list li {
+    padding: 8px;
+    background: #f1f1f1;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
