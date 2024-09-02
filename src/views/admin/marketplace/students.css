@@ -1,0 +1,53 @@
+.table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table .education {
+    word-wrap: break-word;
+    white-space: normal;
+    width: auto;
+    display: flex !important; /* Adjust the max-width as needed */
+  }
+  @media screen and (min-width: 1200px) {
+    .css-8y8lw5 {
+        width: calc(100% - 168px) !important;
+        max-width: calc(100% - 259px) !important;
+    }
+}
+
+  .education {
+    width: 700px;
+    display: inline-block !important;
+
+  }
+  .css-892zhy {
+    background: var(--chakra-colors-white);
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear;
+    width: 252px !important;
+    height: 100vh;
+    margin: 0px;
+    min-height: 100%;
+    overflow-x: hidden;
+    box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+}
+
+  form{
+    display: grid;
+  }
+  .table-sm>:not(caption)>*>* {
+    padding: .25rem .25rem;
+    font-size: 13px;
+}
+  
+.addbtn{
+    color: rgb(7, 233, 245);
+    background-color: rgb(88, 100, 100);
+    padding: 10px;
+}
+.addbtn:hover{
+    color: rgb(209, 12, 12);
+    background-color: rgb(145, 173, 173);
+}
+  
+  
