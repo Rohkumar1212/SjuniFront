@@ -82,7 +82,7 @@ const GetAllMarksheets = () => {
   const handleDownloadPDF = async () => {
     if (modalContentRef.current && selectedMarksheet) {
       const canvas = await html2canvas(modalContentRef.current, {
-        scale: 4, // Increase the scale further to increase resolution and size
+        scale: 6, // Increase the scale further to increase resolution and size
       });
   
       const imgData = canvas.toDataURL('image/jpeg', 1.0); // Set quality to the highest
@@ -96,7 +96,7 @@ const GetAllMarksheets = () => {
       const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
   
       // Increase the number of pages to increase size
-      const numPages = 10; // Create multiple pages with the same content
+      const numPages = 1; // Create multiple pages with the same content
       for (let i = 0; i < numPages; i++) {
         if (i > 0) pdf.addPage();
         pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
@@ -106,12 +106,13 @@ const GetAllMarksheets = () => {
       if (selectedMarksheet.student_pic) {
         try {
           const studentPic = await loadImage(`${selectedMarksheet.student_pic.picPath}${selectedMarksheet.student_pic.picName}`);
-          const imageWidth = 50; // Adjust the width as needed
+          const imageWidth = 12; 
+          // Adjust the width as needed
           const imageHeight = (studentPic.height * imageWidth) / studentPic.width;
   
           // Fixed position for the image on the PDF
-          const imageXPosition = 130; // X position for the image (from the left)
-          const imageYPosition = 25; // Y position for the image (from the top)
+          const imageXPosition = 153; // X position for the image (from the left)
+          const imageYPosition = 23; // Y position for the image (from the top)
   
           for (let i = 0; i < numPages; i++) {
             pdf.setPage(i + 1); // Ensure the correct page is selected

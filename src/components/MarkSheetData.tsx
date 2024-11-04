@@ -137,11 +137,10 @@ const MarksheetApp: React.FC = () => {
   //     }
   //   }
   // };
-
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
-  
+
     try {
       const isFeePaid = true; // Replace with actual logic
       if (!isFeePaid) {
@@ -150,10 +149,10 @@ const MarksheetApp: React.FC = () => {
         );
         return;
       }
-  
+
       // Create a FormData instance
       const formDataToSend = new FormData();
-  
+
       // Append form fields
       Object.keys(formData).forEach((key) => {
         if (key === "subjects") {
@@ -166,13 +165,13 @@ const MarksheetApp: React.FC = () => {
           formDataToSend.append(key, formData[key as keyof FormData] as string);
         }
       });
-  
+
       console.log("Form Data To Send:", formDataToSend);
-  
+
       // Fetch token and URL
       const token = localStorage.getItem("token"); // Replace with actual token logic
-      const apiUrl = `${process.env.REACT_APP_API_URL}/api/v1/generateMarksheet/xvuvL0N5gW1wu01VFjsA57bQT9/tc0qSUh0NMuoy4VmH3L3T3tV0fDKFCZnLU9FbghoDHUKrfKcUgK/85gdSpxZAgqCEE31i1CBn35Dwf/WxfMAFM4hjMzzr4qvMB9RhwQ4y`;
-  
+      const apiUrl = `${process.env.REACT_APP_API_URL}/api/v1/generateMarksheet/xvuvL0N5gW1wu01VFjsA57bQT9/tc0qSUh0NMuoy4VmH3L3T3tV0fDKFCZnLU9FbghoDHUKrfKcUgK`;
+
       // Make API request
       const response = await axios.post(apiUrl, formDataToSend, {
         headers: {
@@ -180,7 +179,7 @@ const MarksheetApp: React.FC = () => {
           Authorization: `Bearer ${token}`,
         },
       });
-  
+
       console.log("Data posted successfully:", response.data);
       setFormData(initialFormData);
       setShowSuccessPopup(true); // Show the success popup
@@ -197,7 +196,6 @@ const MarksheetApp: React.FC = () => {
       }
     }
   };
-
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -564,7 +562,7 @@ const MarksheetApp: React.FC = () => {
             <label>
               Date of Issue:
               <input
-                type="text"
+                type="date"
                 name="date_of_issue"
                 value={formData.date_of_issue}
                 onChange={handleChange}

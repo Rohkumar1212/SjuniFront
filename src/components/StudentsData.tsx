@@ -267,20 +267,21 @@ const StudentsData: React.FC = () => {
     setFilteredStudents(filtered);
   };
 
-  const handleDelete = async () => {
+ const handleDelete = async () => {
     try {
       await axios.delete(
-        `${process.env.REACT_APP_API_URL}/api/v1/deleteStudent/${deletingStudentId.consultantId}/tc0qSUh0NMuoy4VmH3L3T3tV0fDKFCZnLU9FbghoDHUKrfKcUgK/${deletingStudentId.studentId}`
+        `${process.env.REACT_APP_API_URL}/api/v1/deleteStudent/${deletingStudentId.consultantId}/UYrxr0BuxMOGjXqlO7DvDi07WL4KmYVo0ZW1UxEPz1G0a762Qew/${deletingStudentId.studentId}`
       );
-      // setStudents((prevStudents) =>
-      //   prevStudents.filter((student) => student._id !== deletingStudentId.studentId)
-      // );
+      setStudents((prevStudents) =>
+        prevStudents.filter((student) => student._id !== deletingStudentId.studentId)
+      );
       setShowDeleteModal(false);
-      setDeletingStudentId({studentId:"", consultantId:"", userId:""});
+      setDeletingStudentId({ studentId: "", consultantId: "", userId: "" });
     } catch (error) {
       console.error("Error deleting student:", error);
     }
   };
+
 
   const openDeleteModal = (studentId: string, consultantId: string, userId: string,) => {
    setDeletingStudentId({studentId, consultantId, userId});

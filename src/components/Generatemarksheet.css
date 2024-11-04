@@ -270,3 +270,11 @@
 button {
   margin-top: 20px;
 }
+.modal-student-pic {
+  width: 150px;  /* Adjust the width of the student picture */
+  height: 150px; /* Maintain a square aspect ratio */
+  object-fit: cover;  /* Ensures the image doesn't stretch */
+  position: absolute;
+  top: 55px;  /* Vertical position of the image */
+  left: 630px;  /* Horizontal position of the image */
+}

@@ -60,17 +60,24 @@ const GetAllCertificate: React.FC = () => {
     if (modalData) {
       const modal = document.getElementById("certificate-modal");
       if (modal) {
-        html2canvas(modal).then((canvas) => {
+        html2canvas(modal, {
+          scale: 2, // Increase scale for better resolution
+          useCORS: true, // Use this to enable cross-origin images
+          logging: true,
+        }).then((canvas) => {
           const imgData = canvas.toDataURL("image/png");
-          const pdf = new jsPDF();
-          const imgWidth = pdf.internal.pageSize.getWidth();
-          const imgHeight = (canvas.height * imgWidth) / canvas.width;
-          pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+          const pdf = new jsPDF({
+            orientation: "portrait",
+            unit: "px",
+            format: [canvas.width, canvas.height],
+          });
+          pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
           pdf.save("certificate.pdf");
         });
       }
     }
   };
+  
 
   if (loading) {
     return <p>Loading...</p>;
