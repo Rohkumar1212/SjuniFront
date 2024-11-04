@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59e4e640.css",
+    "main.js": "/static/js/main.8ebeb0d6.js",
+    "static/js/213.4ae98ecd.chunk.js": "/static/js/213.4ae98ecd.chunk.js",
+    "static/js/732.1329ddfc.chunk.js": "/static/js/732.1329ddfc.chunk.js",
+    "static/media/Certificates.png": "/static/media/Certificates.69db7568e07f9fabbf8d.png",
+    "static/media/SjUniversity.png": "/static/media/SjUniversity.21873abf09652cf76e62.png",
+    "static/media/Sj-logo-dashboard.png": "/static/media/Sj-logo-dashboard.d03f552ed6343a0cdbd2.png",
+    "index.html": "/index.html",
+    "main.59e4e640.css.map": "/static/css/main.59e4e640.css.map",
+    "main.8ebeb0d6.js.map": "/static/js/main.8ebeb0d6.js.map",
+    "213.4ae98ecd.chunk.js.map": "/static/js/213.4ae98ecd.chunk.js.map",
+    "732.1329ddfc.chunk.js.map": "/static/js/732.1329ddfc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59e4e640.css",
+    "static/js/main.8ebeb0d6.js"
+  ]
+}
