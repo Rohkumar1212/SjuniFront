@@ -31,13 +31,15 @@ interface Student {
 const StudentsData: React.FC = () => {
   const [students, setStudents] = useState<Student[]>([]);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [deletingStudentId, setDeletingStudentId] = useState<{studentId: string; userId:string; consultantId:string}>(
-    {
-      studentId:"",
-      userId:"",
-      consultantId: ""
-    }
-  );
+  const [deletingStudentId, setDeletingStudentId] = useState<{
+    studentId: string;
+    userId: string;
+    consultantId: string;
+  }>({
+    studentId: "",
+    userId: "",
+    consultantId: "",
+  });
   const [filteredStudents, setFilteredStudents] = useState([]);
   const [show, setShow] = useState(false);
   const [editingStudentId, setEditingStudentId] = useState<string | null>(null);
@@ -200,7 +202,7 @@ const StudentsData: React.FC = () => {
       } else {
         console.log("Adding new student");
         const response = await axios.post(
-         `${process.env.REACT_APP_API_URL}/api/v1/addStudent/85gdSpxZAgqCEE31i1CBn35Dwf/UYrxr0BuxMOGjXqlO7DvDi07WL4KmYVo0ZW1UxEPz1G0a762Qew`,
+          `${process.env.REACT_APP_API_URL}/api/v1/addStudent/85gdSpxZAgqCEE31i1CBn35Dwf/UYrxr0BuxMOGjXqlO7DvDi07WL4KmYVo0ZW1UxEPz1G0a762Qew`,
           formData,
           {
             headers: {
@@ -254,7 +256,9 @@ const StudentsData: React.FC = () => {
       );
     }
     if (filters.name) {
-      filtered = filtered.filter((student) => student.name.includes(filters.name));
+      filtered = filtered.filter((student) =>
+        student.name.includes(filters.name)
+      );
     }
     if (filters.id) {
       filtered = filtered.filter((student) => student._id.includes(filters.id));
@@ -267,13 +271,15 @@ const StudentsData: React.FC = () => {
     setFilteredStudents(filtered);
   };
 
- const handleDelete = async () => {
+  const handleDelete = async () => {
     try {
       await axios.delete(
         `${process.env.REACT_APP_API_URL}/api/v1/deleteStudent/${deletingStudentId.consultantId}/UYrxr0BuxMOGjXqlO7DvDi07WL4KmYVo0ZW1UxEPz1G0a762Qew/${deletingStudentId.studentId}`
       );
       setStudents((prevStudents) =>
-        prevStudents.filter((student) => student._id !== deletingStudentId.studentId)
+        prevStudents.filter(
+          (student) => student._id !== deletingStudentId.studentId
+        )
       );
       setShowDeleteModal(false);
       setDeletingStudentId({ studentId: "", consultantId: "", userId: "" });
@@ -282,15 +288,18 @@ const StudentsData: React.FC = () => {
     }
   };
 
-
-  const openDeleteModal = (studentId: string, consultantId: string, userId: string,) => {
-   setDeletingStudentId({studentId, consultantId, userId});
+  const openDeleteModal = (
+    studentId: string,
+    consultantId: string,
+    userId: string
+  ) => {
+    setDeletingStudentId({ studentId, consultantId, userId });
     setShowDeleteModal(true);
   };
 
   const closeDeleteModal = () => {
     setShowDeleteModal(false);
-    setDeletingStudentId({studentId:"", consultantId:"", userId:""});
+    setDeletingStudentId({ studentId: "", consultantId: "", userId: "" });
   };
   return (
     <div className="container">
@@ -373,7 +382,7 @@ const StudentsData: React.FC = () => {
                     student.profilePic.picPath &&
                     student.profilePic.picName && (
                       <img
-                        src={`${student.profilePic.picPath}${student.profilePic.picName}`}
+                        src={`${process.env.REACT_APP_API_URL}/${student.profilePic.picPath}/${student.profilePic.picName}`}
                         alt={student.profilePic.picName}
                         width="50"
                         height="50"
@@ -402,12 +411,17 @@ const StudentsData: React.FC = () => {
                   </Button>
                   <Button
                     variant="danger"
-                    onClick={() => openDeleteModal(student.userId, student.consultantId, student.userId)}
+                    onClick={() =>
+                      openDeleteModal(
+                        student.userId,
+                        student.consultantId,
+                        student.userId
+                      )
+                    }
                   >
                     Delete
                   </Button>
-                </td>            
-                  
+                </td>
               </tr>
             ))}
           </tbody>
@@ -416,9 +430,7 @@ const StudentsData: React.FC = () => {
           <DeleteModal
             show={showDeleteModal}
             handleClose={closeDeleteModal}
-            handleDeleteConfirm={() =>
-              handleDelete()
-              }
+            handleDeleteConfirm={() => handleDelete()}
           />
         )}
       </div>

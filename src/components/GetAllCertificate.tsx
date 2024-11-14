@@ -119,7 +119,7 @@ const GetAllCertificate: React.FC = () => {
                   {certificate.student_pic ? (
                     <img
                       className="student-pic"
-                      src={`${certificate.student_pic.picPath}${certificate.student_pic.picName}`}
+                      src={`${process.env.REACT_APP_API_URL}/${certificate.student_pic.picPath}/${certificate.student_pic.picName}`}
                       alt="Student Pic"
                     />
                   ) : (
@@ -158,7 +158,7 @@ const GetAllCertificate: React.FC = () => {
             </h2>
             <img
               className="modal-student-pic"
-              src={`${modalData.student_pic.picPath}${modalData.student_pic.picName}`}
+              src={`${process.env.REACT_APP_API_URL}/${modalData.student_pic.picPath}/${modalData.student_pic.picName}`}
               alt="Student Pic"
             />
             <p className="dateofissues">

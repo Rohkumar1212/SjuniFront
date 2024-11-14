@@ -218,7 +218,7 @@ const GetAllMarksheets = () => {
               <td>
                 {marksheet.student_pic ? (
                   <img
-                    src={`${marksheet.student_pic.picPath}${marksheet.student_pic.picName}`}
+                    src={`${process.env.REACT_APP_API_URL}/${marksheet.student_pic.picPath}/${marksheet.student_pic.picName}`}
                     alt="Student Pic"
                     style={{ width: '50px', height: '50px' }}
                   />
@@ -252,7 +252,7 @@ const GetAllMarksheets = () => {
             <div className="student-info">
               {selectedMarksheet.student_pic && (
                 <img
-                  src={`${selectedMarksheet.student_pic.picPath}${selectedMarksheet.student_pic.picName}`}
+                  src={`${process.env.REACT_APP_API_URL}/${selectedMarksheet.student_pic.picPath}/${selectedMarksheet.student_pic.picName}`}
                   alt="Student Pic"
                   style={{ width: '100px', height: '100px' }}
                   className='profileimg'

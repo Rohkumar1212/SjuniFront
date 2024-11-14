@@ -83,7 +83,7 @@ const ConsultantData: React.FC = () => {
             <td>
               {student.profilePic && (
                 <img
-                  src={`${student.profilePic.picPath}${student.profilePic.picName}`}
+                  src={`${process.env.REACT_APP_API_URL}/${student.profilePic.picPath}/${student.profilePic.picName}`}
                   width={50}
                   height={50}
                   alt="Profile Pic"

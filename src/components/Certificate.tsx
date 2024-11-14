@@ -101,7 +101,7 @@ const Certificate: React.FC = () => {
         <p><strong>Obtained:</strong> ${certificateData.obtained_the_degree_of || ''}</p>
         <p><strong>Description:</strong> ${certificateData.deploma_description || ''}</p>
         <p><strong>Marksheet Code:</strong> ${certificateData.marksheet_code || ''}</p>
-        <p><strong>Student Pic:</strong> ${certificateData.student_pic ? `<img src="${certificateData.student_pic.picPath}${certificateData.student_pic.picName}" alt="Student" width="100" />` : 'No image available'}</p>
+        <p><strong>Student Pic:</strong> ${certificateData.student_pic ? `<img src="${process.env.REACT_APP_API_URL}/${certificateData.student_pic.picPath}/${certificateData.student_pic.picName}" alt="Student" width="100" />` : 'No image available'}</p>
         <!-- Add more certificate details as needed -->
       `;
 

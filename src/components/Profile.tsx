@@ -67,7 +67,7 @@ const Profile: React.FC = () => {
        {userData && (
         <>
         <div className='container'>
-        <img  className='profilepic' src={`${userData.profilePic.picPath}${userData.profilePic.picName}`} alt="Profile" />
+        <img  className='profilepic' src={`${process.env.REACT_APP_API_URL}/${userData.profilePic.picPath}/${userData.profilePic.picName}`} alt="Profile" />
           <p className='username'>Name: {userData.name}</p>
           </div>
         </>
